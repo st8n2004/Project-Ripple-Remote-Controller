@@ -15,7 +15,7 @@ This repository contains the files required to reproduce the remote controller s
 - 915 MHz Antenna
 - Battery Power Supply
 
-##Connections
+## Connections
 | Signal              | ESP32 Pin     | Connected Component         | Voltage Range |
 | ------------------- | ------------- | --------------------------- | ------------- |
 | Steering Input      | GPIO2         | 10 kΩ Potentiometer (wiper) | 0–3.3 V       |
