@@ -15,6 +15,16 @@ This repository contains the files required to reproduce the remote controller s
 - 915 MHz Antenna
 - Battery Power Supply
 
+##Connections
+| Signal              | ESP32 Pin     | Connected Component         | Voltage Range |
+| ------------------- | ------------- | --------------------------- | ------------- |
+| Steering Input      | GPIO2         | 10 kΩ Potentiometer (wiper) | 0–3.3 V       |
+| Throttle Input      | GPIO3         | 10 kΩ Potentiometer (wiper) | 0–3.3 V       |
+| Potentiometer Power | 3V3           | Both Potentiometers         | 3.3 V         |
+| Ground              | GND           | Both Potentiometers         | 0 V           |
+| RF Communication    | SMA Connector | 915 MHz Antenna             | RF Signal     |
+
+
 ## Software
 
 Firmware developed using Arduino IDE in C++.
