@@ -37,7 +37,7 @@ void setup() {
                     LORA_PREAMBLE_LENGTH, LORA_FIX_LENGTH_PAYLOAD_ON,
                     true, 0, 0, LORA_IQ_INVERSION_ON, 2000);
 
-  Serial.println("🎮 Joystick Transmitter Ready...");
+  Serial.println(" Joystick Transmitter Ready...");
 }
 
 void loop() {
@@ -46,7 +46,7 @@ void loop() {
     int y = analogRead(VRY_PIN);  // Throttle
 
     sprintf(txpacket, "X=%d,Y=%d", x, y);
-    Serial.printf("📡 Sending: %s\n", txpacket);
+    Serial.printf(" Sending: %s\n", txpacket);
 
     Radio.Send((uint8_t *)txpacket, strlen(txpacket));
     lora_idle = false;
@@ -56,11 +56,12 @@ void loop() {
 }
 
 void OnTxDone(void) {
-  Serial.println("✔️ TX Done");
+  Serial.println(" TX Done");
   lora_idle = true;
 }
 
 void OnTxTimeout(void) {
-  Serial.println("⚠️ TX Timeout");
+  Serial.println(" TX Timeout");
   lora_idle = true;
 }
+
